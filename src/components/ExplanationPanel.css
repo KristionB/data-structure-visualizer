@@ -1,0 +1,97 @@
+.explanation-panel {
+  background-color: var(--surface);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border);
+}
+
+.explanation-section {
+  margin-bottom: 2rem;
+}
+
+.explanation-section h3,
+.complexity-section h3 {
+  color: var(--primary-light);
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.explanation-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, var(--surface-light) 0%, var(--surface) 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--primary);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+}
+
+.complexity-section {
+  border-top: 2px solid var(--border);
+  padding-top: 2rem;
+}
+
+.complexity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.complexity-item {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, var(--surface-light) 0%, var(--surface) 100%);
+  padding: 1.25rem;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
+}
+
+.complexity-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.complexity-label {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.complexity-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary-light);
+  font-family: 'Fira Code', 'Courier New', monospace;
+  letter-spacing: 0.05em;
+}
+
+.complexity-explanation {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-style: italic;
+  margin-top: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+  .explanation-panel {
+    padding: 1.5rem;
+  }
+  
+  .complexity-grid {
+    grid-template-columns: 1fr;
+  }
+}

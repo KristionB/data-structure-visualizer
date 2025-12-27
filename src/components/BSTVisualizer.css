@@ -1,0 +1,291 @@
+.visualizer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.visualizer-main {
+  background-color: var(--surface);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border);
+}
+
+.visualizer-main h2 {
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.controls {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: var(--surface-light);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.input-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.input-field {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  background-color: var(--background);
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+}
+
+.input-field::placeholder {
+  color: var(--text-muted);
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.button-group {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.875rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+.btn-secondary {
+  background-color: var(--surface-light);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--border);
+  transform: translateY(-2px);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, var(--success) 0%, #059669 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.btn-success:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+.btn-info {
+  background: linear-gradient(135deg, var(--info) 0%, #0891b2 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+}
+
+.btn-info:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(6, 182, 212, 0.4);
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, var(--warning) 0%, #d97706 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.btn-warning:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+}
+
+.visualization-area {
+  margin-top: 2rem;
+}
+
+.bst-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 450px;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, var(--surface-light) 0%, var(--surface) 100%);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  overflow-x: auto;
+}
+
+.tree-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.tree-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem;
+  position: relative;
+}
+
+.node-content {
+  background: linear-gradient(135deg, var(--surface) 0%, var(--surface-light) 100%);
+  border: 2.5px solid var(--primary);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.tree-node.highlighted .node-content {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.3) 0%, rgba(245, 158, 11, 0.4) 100%);
+  border-color: var(--warning);
+  transform: scale(1.25);
+  box-shadow: 0 8px 32px rgba(245, 158, 11, 0.6);
+}
+
+.tree-node.found .node-content {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.3) 0%, rgba(16, 185, 129, 0.4) 100%);
+  border-color: var(--success);
+  transform: scale(1.25);
+  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.6);
+}
+
+.tree-node.notfound .node-content {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(239, 68, 68, 0.3) 100%);
+  border-color: var(--error);
+}
+
+.node-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary-light);
+}
+
+.tree-node.highlighted .node-value,
+.tree-node.found .node-value {
+  color: var(--text-primary);
+}
+
+.tree-node.notfound .node-value {
+  color: var(--error);
+}
+
+.node-children {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  padding: 3rem;
+}
+
+.operation-message {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(6, 182, 212, 0.15) 100%);
+  border-left: 4px solid var(--info);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-weight: 500;
+  text-align: center;
+  border: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+/* Draw lines between nodes */
+.tree-node::before {
+  content: '';
+  position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  width: 2px;
+  height: 1.5rem;
+  background: linear-gradient(180deg, var(--primary) 0%, transparent 100%);
+  z-index: 1;
+}
+
+.tree-node:first-child::before {
+  display: none;
+}
+
+.node-children::before {
+  content: '';
+  position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  width: 2px;
+  height: 1.5rem;
+  background: linear-gradient(180deg, var(--primary) 0%, transparent 100%);
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .visualizer-main {
+    padding: 1.5rem;
+  }
+  
+  .bst-container {
+    padding: 1.5rem;
+  }
+  
+  .node-content {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .node-value {
+    font-size: 1.2rem;
+  }
+  
+  .node-children {
+    gap: 1.5rem;
+  }
+}
