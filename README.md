@@ -1,97 +1,68 @@
-Project Overview
+# Data Structures Visualizer
 
-This project was created as part of my Programming Problem Solving I coursework to better understand how fundamental data structures work internally.
+## Overview
+This project was developed as part of my **Programming Problem Solving I** coursework to strengthen my understanding of fundamental data structures and algorithmic thinking.
 
-The goal of this project is to visualize core data structures step by step and explain what happens during each operation in plain language. By building both the logic and the visual output, I reinforced my understanding of how data is stored, accessed, and modified in memory.
+The purpose of this application is to visualize how common data structures behave during basic operations such as insertion, removal, and searching. By implementing both the data structure logic and the visual representation, this project bridges the gap between theoretical concepts and practical implementation.
 
-Implemented Data Structures
+The focus of this project is **correctness, clarity, and step-by-step reasoning**, rather than performance optimization or advanced features.
 
-The application currently supports visualization for the following data structures:
+---
 
-Arrays
+## Supported Data Structures
+The following data structures are implemented and visualized:
 
-Stacks
+- Array  
+- Stack (Last In, First Out)  
+- Queue (First In, First Out)  
+- Binary Search Tree (BST)
 
-Queues
+Each data structure supports operations appropriate to its behavior and constraints.
 
-Binary Search Trees (BST)
+---
 
-Each data structure supports basic operations such as insertion, removal, and searching (where applicable).
+## Features
 
-Key Features
+- Step-by-step visualization of data structure operations  
+- Plain-English explanations describing:
+  - What operation is occurring  
+  - Why the operation behaves that way  
+  - What rule or invariant is being preserved  
+- Dynamic display of time complexity:
+  - Best case
+  - Average case
+  - Worst case
+- User controls for inserting, removing, and searching values
 
-Step-by-step visualization of operations
+The application is designed to be easy to follow for beginners learning data structures for the first time.
 
-Clear explanations describing what happens during each step
+---
 
-Invariant-based reasoning, such as:
+## Learning Outcomes
+Through this project, I practiced and reinforced the following concepts:
 
-Stack follows LIFO (Last In, First Out)
+- Implementing data structures manually without relying on built-in libraries  
+- Translating abstract data structure behavior into visual representations  
+- Writing clean, readable, and well-organized JavaScript code  
+- Applying problem-solving techniques learned in Programming Problem Solving I  
+- Understanding and explaining time complexity  
+- Debugging logical errors through step-by-step tracing  
 
-Queue follows FIFO (First In, First Out)
+---
 
-Binary Search Trees maintain ordered structure
+## Technologies Used
 
-Time complexity display for each operation (best, average, worst case)
+- React  
+- JavaScript (ES6)  
+- HTML / CSS  
 
-This project focuses on correctness and understanding rather than performance or advanced UI features.
+This project is entirely frontend-based. No backend, database, or authentication is used.
 
-What I Learned
+---
 
-Through this project, I practiced and reinforced:
+## How to Run the Project
 
-Implementing data structures manually without built-in libraries
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
 
-Translating abstract concepts into visual representations
-
-Writing clean, readable JavaScript logic
-
-Explaining algorithms in simple terms
-
-Understanding time and space complexity
-
-Debugging logical errors step by step
-
-Technologies Used
-
-React
-
-JavaScript (ES6)
-
-HTML/CSS
-
-No backend or database is used. All logic runs on the client side.
-
-How to Run the Project
-
-Clone the repository
-
-Install dependencies:
-
-npm install
-
-
-Start the development server:
-
-npm start
-
-
-Open the app in your browser at http://localhost:3000
-
-Future Improvements
-
-Possible future extensions include:
-
-Additional data structures (heaps, graphs)
-
-Sorting algorithm visualizations
-
-More detailed animations
-
-An “interview practice” mode with questions
-
-Optional AI-based explanations
-
-Why This Project Matters
-
-This project helped bridge the gap between theory and implementation. Instead of only tracing code on paper, I was able to see how data structures evolve over time, which strengthened my problem-solving skills and understanding of core computer science concepts.
